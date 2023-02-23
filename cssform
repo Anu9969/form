@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <form action="">
+        <h2>Ticket Reservation</h2>
+        <div>
+            Tourist Name: <input type="text" id="Name" placeholder="Enter your name">
+        </div><br>
+        
+        <div>
+            Tourist age: <select name="Age" id="Age">
+                <option value="Child">Child</option>
+                <option value="Adult">Adult</option>
+                <option value="Senior citizen">Sesnior citizen</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            Mode of Travel: <select name="" id="">
+                <option value="By Air">By Air</option>
+                <option value="By Train">By Train</option>
+            </select>
+        </div>
+        <div>
+            <button onclick="submit">SUBMIT</button>
+        </div>
+    </form>
+</body>
+</html>
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-====================================================================================================================================================================
+
+*{
+    margin-top: 20%;
+    margin: 0%;
+    padding: 4;
+}
+
+body{
+    align-content: center;
+    background-color:greenyellow ;
+}
+body{
+    align-items: center;
+    display: flexbox;
+}
+form {
+    align-items: center;
+    display: flexbox;
+    width: 500px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    background-color: aqua;
+  }
+ h2{
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+
+  }
+
