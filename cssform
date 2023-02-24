@@ -240,6 +240,155 @@ function printTable() {
 }
 
 
+================================================================================================================================================
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Registration Form</title>
+	<style>
+
+   body{
+    background:linear-gradient(to bottom,#6e13e6,#d80d0d,#d5e965,#eb1722);
+   }
+ label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"], select, input[type="date"], input[type="email"], input[type="password"] {
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: wheat;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+form {
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75) ;
+   box-sizing: border-box;
+}
+
+}
+
+	</style>
+	<script>
+		function validateRollNo() {
+			var rollno = document.getElementById("rollno").value;
+			var pattern = /^[0-9]{7}$/;
+			if (pattern.test(rollno)) {
+				return true;
+			}
+			else {
+				document.getElementById("rollnoError").innerHTML = "Please enter a valid 7-digit roll number";
+				return false;
+			}
+		}
+		function validateName() {
+			var name = document.getElementById("name").value;
+			var pattern = /^[a-zA-Z ]*$/;
+			if (pattern.test(name)) {
+				return true;
+			}
+			else {
+				document.getElementById("nameError").innerHTML = "Please enter a valid name";
+				return false;
+			}
+		}
+		function validateDOB() {
+			var dob = document.getElementById("dob").value;
+			if (dob == "") {
+				document.getElementById("dobError").innerHTML = "Please enter your date of birth";
+				return false;
+			}
+			else {
+				return true;
+			}
+		}
+		function validateForm() {
+			var rollnoValid = validateRollNo();
+			var nameValid = validateName();
+			var dobValid = validateDOB();
+			if (rollnoValid && nameValid && dobValid) {
+				return true;
+			}
+			else {
+				return false;
+			}
+		}
+	</script>
+</head>
+<body>
+	<h2>Student Registration Form</h2>
+	<form onsubmit="return validateForm()">
+		<label for="rollno">Roll Number:</label>
+		<input type="text" id="rollno" name="rollno" required>
+		<div id="rollnoError" class="error"></div>
+
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" required>
+		<div id="nameError" class="error"></div>
+
+		<label for="gender">Gender:</label>
+		<label><input type="radio" name="gender" value="male" checked> Male</label>
+		<label><input type="radio" name="gender" value="female"> Female</label>
+
+		<label for="hobbies">Hobbies:</label>
+		<label><input type="checkbox" name="hobbies" value="reading"> Reading</label>
+		<label><input type="checkbox" name="hobbies" value="swimming"> Swimming</label>
+		<label>
+        <label><input type="checkbox" name="hobbies" value="music"> Music</label>
+
+        <label for="course">Course:</label>
+        <select id="course" name="course">
+                <option value="engineering">Engineering</option>
+                <option value="medicine">Medicine</option>
+                <option value="arts">Arts</option>
+        </select>
+    
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+            <div id="dobError" class="error"></div>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+    
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+    </html>
+    
+    
+=============================================================================================================================================
 
 
 
